@@ -1,5 +1,7 @@
 <h1 style="text-align: center">Mod Detection Preventer</h1>
 
+⚠️ For now please stop using this mod. Another method of detecting mods has been found, and I am not able to resolve it at this time. Using this mod might cause you to get banned. ⚠️
+
 <p align="center">
 <img src="src/main/resources/assets/moddetectionpreventer/icon.png">
 </p>
