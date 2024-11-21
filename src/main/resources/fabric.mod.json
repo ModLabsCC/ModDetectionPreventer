@@ -8,7 +8,8 @@
     "JustAlittleWolf"
   ],
   "contributors": [
-    "croaak"
+    "croaak",
+    "Totobird-Creations"
   ],
   "contact": {
     "sources": "https://github.com/JustAlittleWolf/ModDetectionPreventer",
@@ -17,16 +18,12 @@
   "license": "MIT",
   "icon": "assets/moddetectionpreventer/icon.png",
   "environment": "client",
-  "entrypoints": {
-    "client": [
-      "me.wolfii.moddetectionpreventer.client.ModDetectionPreventerClient"
-    ]
-  },
   "mixins": [
     "moddetectionpreventer.mixins.json"
   ],
+  "accessWidener": "moddetectionpreventer.accesswidener",
   "depends": {
-    "fabricloader": ">=0.15.0",
-    "minecraft": ">=1.20.3 <=1.20.4"
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21"
   }
 }
