@@ -25,6 +25,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modLocalRuntime "maven.modrinth:modmenu:${project.modmenu_version}"
+    modLocalRuntime "maven.modrinth:xaeros-minimap:${project.xaero_minimap_version}"
 }
 
 processResources {
