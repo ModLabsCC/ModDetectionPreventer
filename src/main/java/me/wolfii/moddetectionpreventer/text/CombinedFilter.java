@@ -2,29 +2,35 @@ package me.wolfii.moddetectionpreventer.text;
 
 import net.minecraft.text.*;
 
-public class CombinedFilter {
-    public static Text filterKeybindsRecursive(Text message) {
+
+public final class CombinedFilter {
+    private CombinedFilter() { throw new UnsupportedOperationException("Consider this class abstract-final"); }
+
+
+    /// Recursively walks through the components of a `Text`, masking any which should be filtered.
+    public static Text filterComponents(Text message) {
         MutableText filtered = MutableText.of(message.getContent());
+
+        // Filter keybind components.
         if (message.getContent() instanceof KeybindTextContent keybindTextContent) {
             String keybind = keybindTextContent.getKey();
-            if (KeybindFilter.isVanillaKeybinding(keybind)) {
-                filtered = MutableText.of(keybindTextContent);
-            } else {
-                filtered = MutableText.of(new PlainTextContent.Literal(keybind));
-            }
+            // Send back Minecraft's factory setting value of the keybind.
+            filtered = MutableText.of(new PlainTextContent.Literal(KeybindFilter.defaultKeybindingValue(keybind)));
         }
+
+        // Filter translatable components.
         if (message.getContent() instanceof TranslatableTextContent translatableTextContent) {
             String translationKey = translatableTextContent.getKey();
-            if (TranslationFilter.isVanillaTranslation(translationKey)) {
-                filtered = MutableText.of(translatableTextContent);
-            } else {
-                filtered = MutableText.of(new PlainTextContent.Literal(translationKey));
-            }
+            filtered = MutableText.of(new PlainTextContent.Literal(TranslationFilter.localisedTranslationKey(translationKey)));
         }
+
         filtered.setStyle(message.getStyle());
         for (Text sibling : message.getSiblings()) {
-            filtered.append(filterKeybindsRecursive(sibling));
+            filtered.append(CombinedFilter.filterComponents(sibling));
         }
+
         return filtered;
     }
+
+
 }
