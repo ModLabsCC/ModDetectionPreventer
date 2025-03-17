@@ -5,6 +5,8 @@ plugins {
 
 version = project.mod_version
 
+def mcVersion = project.property("minecraft_version")
+
 repositories {
     maven {
         name = 'ModLabs Mirrors'
@@ -16,15 +18,19 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+    modLocalRuntime "maven.modrinth:modmenu:${project.modmenu_version}"
 }
 
 processResources {
     inputs.property "version", project.version
+    inputs.property "minecraft_version", mcVersion
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand  "version": project.version,
+                "minecraft_version": mcVersion
     }
 }
 
@@ -32,7 +38,7 @@ loom {
     accessWidenerPath = file("src/main/resources/moddetectionpreventer.accesswidener");
 }
 
-def targetJavaVersion = 17
+def targetJavaVersion = 21
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {

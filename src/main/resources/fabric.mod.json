@@ -14,6 +14,7 @@
     "ModLabs"
   ],
   "contact": {
+    "homepage": "https://modrinth.com/mod/mod-detection-preventer",
     "sources": "https://github.com/ModLabsCC/ModDetectionPreventer",
     "issues": "https://github.com/ModLabsCC/ModDetectionPreventer/issues"
   },
@@ -26,6 +27,7 @@
   "accessWidener": "moddetectionpreventer.accesswidener",
   "depends": {
     "fabricloader": ">=0.16.9",
-    "minecraft": "~1.21"
+    "fabric": "*",
+    "minecraft": "~${minecraft_version}"
   }
 }
