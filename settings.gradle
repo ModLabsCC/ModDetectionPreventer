@@ -1,9 +1,8 @@
 pluginManagement {
     repositories {
         maven {
-            name = 'Fabric'
-            url = 'https://maven.fabricmc.net/'
+            name = 'ModLabs Mirrors'
+            url = 'https://nexus.modlabs.cc/repository/maven-mirrors/'
         }
-        gradlePluginPortal()
     }
 }

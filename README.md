@@ -1,16 +1,4 @@
-<h1 style="text-align: center">Mod Detection Preventer</h1>
-
-⚠️ For now please stop using this mod. Another method of detecting mods has been found, and I am not able to resolve it at this time. Using this mod might cause you to get banned. ⚠️
-
-<p align="center">
-<img src="src/main/resources/assets/moddetectionpreventer/icon.png">
-</p>
-
-<p style="text-align: center">A simple mod that prevents a security vulnerability allowing servers to detect which mods are installed on
-the client side.</p>
-
-
-**While I try my best to keep this mod up to date, server admins might find a new method to access your mods-list. It is always recommended that you follow the server rules.**
+# Mod Detection Preventer
 
 ## The Vulnerability
 
@@ -34,7 +22,7 @@ This detection method works for any mod that has custom translations.
 This mod fixes this issue by simply not resolving any translation or keybind placeholders on signs, except vanilla
 ones. This makes it impossible for the server to use this method to detect installed mods.
 
-To verify this works you can test it in a [test world](https://github.com/JustAlittleWolf/ModDetectionPreventer/raw/1.20.4/testWorld.zip).
+To verify this works you can test it in a [test world](https://github.com/ModLabsCC/ModDetectionPreventer/raw/main/testWorld.zip).
 
 ## Intentions
 
@@ -42,3 +30,17 @@ To verify this works you can test it in a [test world](https://github.com/JustAl
 servers, including [Cytooxien](CytooxienDetectedMods.md). Immediately banning players upon joining, simply because they
 have tweakeroo installed, is unacceptable.~~
 After a discussion with the developer of Cytooxien, they told me that players won't get banned for using tweakeroo, only kicked repeatedly.
+
+# Warning: Use At Your Own Risk
+
+## Important Security Notice
+
+This modification alters Minecraft's network communication patterns by preventing the resolution of non-vanilla translation keys and keybinds. While this functionality protects your privacy by preventing servers from detecting installed mods, it constitutes a form of packet manipulation that violates the rules on many Minecraft servers.
+
+**Please be advised:**
+- Using this mod may result in temporary or permanent account suspension on multiplayer servers
+- Server administrators can implement alternative detection methods
+- The developers of this modification cannot be held responsible for any penalties incurred through its use
+
+This software is provided "as is" without warranty of any kind, and you assume full responsibility for any consequences resulting from its use.
+If you choose to proceed, understand that you do so entirely at your own discretion.

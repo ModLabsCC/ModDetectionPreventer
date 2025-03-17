@@ -1,4 +1,4 @@
-package me.wolfii.moddetectionpreventer.text;
+package cc.modlabs.moddetectionpreventer.text;
 
 import net.minecraft.text.*;
 

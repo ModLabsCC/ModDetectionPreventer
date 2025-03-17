@@ -1,9 +1,16 @@
 plugins {
-    id 'fabric-loom' version '1.5-SNAPSHOT'
+    id 'fabric-loom' version '1.10-SNAPSHOT'
     id 'maven-publish'
 }
 
 version = project.mod_version
+
+repositories {
+    maven {
+        name = 'ModLabs Mirrors'
+        url = 'https://nexus.modlabs.cc/repository/maven-mirrors/'
+    }
+}
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"

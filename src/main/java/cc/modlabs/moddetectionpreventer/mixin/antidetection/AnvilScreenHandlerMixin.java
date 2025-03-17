@@ -1,8 +1,8 @@
-package me.wolfii.moddetectionpreventer.mixin.antidetection;
+package cc.modlabs.moddetectionpreventer.mixin.antidetection;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import me.wolfii.moddetectionpreventer.text.CombinedFilter;
+import cc.modlabs.moddetectionpreventer.text.CombinedFilter;
 import net.minecraft.screen.AnvilScreenHandler;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;

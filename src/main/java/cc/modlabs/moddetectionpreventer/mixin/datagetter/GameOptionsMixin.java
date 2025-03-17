@@ -1,9 +1,8 @@
-package me.wolfii.moddetectionpreventer.mixin.datagetter;
+package cc.modlabs.moddetectionpreventer.mixin.datagetter;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import me.wolfii.moddetectionpreventer.ModDetectionPreventer;
-import me.wolfii.moddetectionpreventer.text.KeybindFilter;
+import cc.modlabs.moddetectionpreventer.text.KeybindFilter;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.client.option.KeyBinding;

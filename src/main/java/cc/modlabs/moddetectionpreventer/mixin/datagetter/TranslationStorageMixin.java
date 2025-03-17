@@ -1,9 +1,9 @@
-package me.wolfii.moddetectionpreventer.mixin.datagetter;
+package cc.modlabs.moddetectionpreventer.mixin.datagetter;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import me.wolfii.moddetectionpreventer.text.TranslationFilter;
+import cc.modlabs.moddetectionpreventer.text.TranslationFilter;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.resource.language.TranslationStorage;
 import net.minecraft.resource.*;

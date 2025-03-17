@@ -1,6 +1,6 @@
-package me.wolfii.moddetectionpreventer.text;
+package cc.modlabs.moddetectionpreventer.text;
 
-import me.wolfii.moddetectionpreventer.ModDetectionPreventer;
+import cc.modlabs.moddetectionpreventer.ModDetectionPreventer;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.util.Language;
