@@ -1,4 +1,4 @@
-# Mod Detection Preventer
+# Use https://github.com/NikOverflow/ExploitPreventer
 
 ## The Vulnerability
 
